@@ -37,7 +37,7 @@ Polynom::Polynom(std::vector<int>& v, int f)
 	data = v;
 }
 
-Polynom::Polynom(Polynom& p)
+Polynom::Polynom(const Polynom& p)
 {
 	data.clear();
 	remainder = p.remainder;
@@ -49,7 +49,7 @@ Polynom::~Polynom()
 {
 }
 
-Polynom& Polynom::operator=(Polynom& p)
+Polynom& Polynom::operator=(const Polynom& p)
 {
 	remainder = p.remainder;
 	field = p.field;
@@ -57,15 +57,15 @@ Polynom& Polynom::operator=(Polynom& p)
 	return *this;
 }
 
-Polynom Polynom::operator+(Polynom& p)
+Polynom Polynom::operator+(const Polynom& p)
 {
-
-	for (iter = data.begin(), p.iter = p.data.begin(); iter != data.end() && p.iter != p.data.end(); iter++, p.iter++)
+	std::vector<int>::const_iterator p_iter;
+	for (iter = data.begin(), p_iter = p.data.begin(); iter != data.end() && p_iter != p.data.end(); iter++, p_iter++)
 	{
 		if (field)
-			(*iter) = Mod::mod(((*iter) + (*p.iter)), field);
+			(*iter) = Mod::mod(((*iter) + (*p_iter)), field);
 		else
-			(*iter) = ((*iter) + (*p.iter));
+			(*iter) = ((*iter) + (*p_iter));
 	}
 
 	return *this;
@@ -174,4 +174,30 @@ std::ostream& operator<<(std::ostream & o, Polynom & p)
 	o << std::endl;
 
 	return o;
+}
+
+void Polynom::shift(int num)
+{
+    auto prevData = data;
+    data.resize(prevData.size() + num);
+	for (int i = 0; i < data.size() + num; i++)
+	{
+		if (i < num)
+		{
+			data[i] = 0;
+		} else
+		{
+			data[i] = prevData[i - num];
+		}
+	}
+}
+
+bool Polynom::isZero()
+{
+    for (int i = 0; i < data.size(); i++)
+    {
+        if (data[i] != 0)
+            return false;
+    }
+    return true;
 }

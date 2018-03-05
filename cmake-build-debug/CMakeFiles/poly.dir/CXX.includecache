@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/andrew/git/newPoly/PolynominalAlgebra/Mod.h
+
+/home/andrew/git/newPoly/PolynominalAlgebra/Polynom.cpp
+Polynom.h
+/home/andrew/git/newPoly/PolynominalAlgebra/Polynom.h
+
+/home/andrew/git/newPoly/PolynominalAlgebra/Polynom.h
+iostream
+-
+vector
+-
+string
+-
+cctype
+-
+cstdlib
+-
+sstream
+-
+Mod.h
+/home/andrew/git/newPoly/PolynominalAlgebra/Mod.h
+
+/home/andrew/git/newPoly/PolynominalAlgebra/Task.cpp
+Task.h
+/home/andrew/git/newPoly/PolynominalAlgebra/Task.h
+
+/home/andrew/git/newPoly/PolynominalAlgebra/Task.h
+Polynom.h
+/home/andrew/git/newPoly/PolynominalAlgebra/Polynom.h
+
+/home/andrew/git/newPoly/PolynominalAlgebra/main.cpp
+Polynom.h
+/home/andrew/git/newPoly/PolynominalAlgebra/Polynom.h
+Task.h
+/home/andrew/git/newPoly/PolynominalAlgebra/Task.h
+

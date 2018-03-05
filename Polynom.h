@@ -17,14 +17,16 @@ public:
 	Polynom(int size, int f = 0);
 	Polynom(std::string polynom, int f = 0);
 	Polynom(std::vector<int>& v, int f = 0);
-	Polynom(Polynom& p);
+	Polynom(const Polynom& p);
 	~Polynom();
-	Polynom& operator=(Polynom& p);
+	Polynom& operator=(const Polynom& p);
 
-	Polynom operator+(Polynom& p);
+	Polynom operator+(const Polynom& p);
 	Polynom operator-(Polynom& p);
 	Polynom operator*(Polynom& p);
 	Polynom operator/(Polynom& p);
+	void shift(int num);
+    bool isZero();
 	
 	Polynom& undefinedCoef(Polynom& divider);
 	

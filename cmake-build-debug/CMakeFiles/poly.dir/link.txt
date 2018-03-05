@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/poly.dir/main.cpp.o CMakeFiles/poly.dir/Polynom.cpp.o CMakeFiles/poly.dir/Task.cpp.o  -o poly 

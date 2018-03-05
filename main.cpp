@@ -22,8 +22,8 @@ int main()
 	std::cout << p;
 	Polynom p2("0 21 -14 -7");
 	std::cout << p2;
-	Polynom p3 = p - p2;
-	std::cout << p3;*/
+	Polynom m = p - p2;
+	std::cout << m;*/
 
 	///////////////////////////////
 
@@ -33,8 +33,8 @@ int main()
 	std::cout << p2;
 	Polynom res1 = p - p2;
 	std::cout << res1;
-	Polynom p3("5 1 0 4 0 4");
-	Polynom res2 = res1 - p3;
+	Polynom m("5 1 0 4 0 4");
+	Polynom res2 = res1 - m;
 	std::cout << res2;*/
 
 	///////////////////////////////
@@ -45,11 +45,11 @@ int main()
 	std::cout << p2;
 	Polynom res1 = p * p2;
 	std::cout << "RES1: " << res1;
-	Polynom p3("1 3", 5);
-	std::cout << p3;
-	Polynom p4("2 1", 5);
-	std::cout << p4;
-	Polynom res2 = p3 * p4;
+	Polynom m("1 3", 5);
+	std::cout << m;
+	Polynom g("2 1", 5);
+	std::cout << g;
+	Polynom res2 = m * g;
 	std::cout << "RES2: " << res2;
 
 	std::cout << "RES1 * RES2: " << res1 * res2;*/
@@ -86,13 +86,8 @@ int main()
 
 	////////////////////////////////
 
-	Polynom p("-8 0 2 1 4");
+	/*Polynom p("-8 0 2 1 4");
 	Polynom p2("-3 2 1");
-	Task::Task1(p, p2);
+	Task::Task1(p, p2);*/
 
-	Polynom p3("4 2 1 1 4 4 3", 7);
-	Polynom p4("1 3 0 5 0 5", 7);
-	Task::Task2(p3, p4);
-
-	system("pause");
 }

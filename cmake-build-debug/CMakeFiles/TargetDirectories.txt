@@ -1,0 +1,3 @@
+/home/andrew/git/newPoly/PolynominalAlgebra/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/andrew/git/newPoly/PolynominalAlgebra/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/andrew/git/newPoly/PolynominalAlgebra/cmake-build-debug/CMakeFiles/poly.dir
